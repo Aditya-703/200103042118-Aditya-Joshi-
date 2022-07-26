@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<style>
+			div{
+				width:500px;
+				height:500px;
+				background-color:orange;
+				}
+				
+			
+				
+			#list{
+					
+					height:300px;
+					width:300px;
+				}
+			#list1{
+					background-color:red;
+					height:300px;
+					width:300px;
+				}
+				
+			#list2{
+					background-color:yellow;
+					height:300px;
+					width:300px;
+				}
+			
+					
+		</style>
+		<script>  
+			$(document).ready(function() {  
+			$("#list1").sortable();
+			$("#list2").sortable();
+			$("#list1,#list2").sortable(
+			{
+				connectWith:"#list1,#list2"
+			})
+			
+		});  
+			
+  </script>  
+	</head>
+		<body>
+			
+				<ul id="list1">
+					<li id="tag1">First</li>
+					<li id="tag2">Second</li>
+					<li id="tag3">Third</li>
+					<li id="tag4">Fourth</li>
+					<li id="tag5">Fifth</li>
+					<li id="tag6">Six</li>
+					<li id="tag7">Seven</li>
+				</ul>
+				<ul id="list2">
+					<li id="tag8">eight</li>
+					<li id="tag9">nine</li>
+					<li id="tag10">Ten</li>
+					<li id="tag11">eleven</li>
+					<li id="tag12">Twelve</li>
+					<li id="tag13">Thirteen</li>
+					<li id="tag14">Fourteen</li>
+			
+			
+			
+			
+				</ul>
+				
+			
+		</body>
+</html>

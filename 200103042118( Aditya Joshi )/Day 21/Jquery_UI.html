@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<style>
+			div{
+				width:100px;
+				height:100px;
+				background-color:orange;
+				}
+				
+			p{
+				width:500px;
+				height:500px;
+				}
+				
+			#droppable{
+				width:100px;
+				height:100px;
+				background-color:red;
+				}
+			#containment{
+				width:500px;
+				height:200px;
+				background-color:yellow;
+				}
+				
+			
+			
+					
+		</style>
+		<script>  
+			$(document).ready(function() {  
+			$( "#draggable" ).draggable();
+			$("#draggableX").draggable({ axis: "x" });
+			$("#draggableY").draggable({ axis: "y" });
+			$("#draggableDistance").draggable({ distance:400});
+			$("#draggableDelay").draggable({ delay:400});
+			$("#containment span").draggable({ containment:"#containment"});
+			$("#droppable").droppable();
+			$("#resize").resizable();
+			
+			
+		});  
+			
+  </script>  
+	</head>
+		<body>
+			<div id="draggable">Drag me</div><hr/>
+			<div id="draggableX">Drag by X-axis</div><hr/>
+			<div id="draggableY">Drag by y-axis</div><hr/>
+			<div id="draggableDelay">Drag Delay</div><hr/>
+			<div id="draggableDistance">Drag distance</div><hr/>
+			<div id="containment"><span>containment function</span></div><hr/>
+			<div id="droppable">Drop me</div><hr/>
+			<div id="resize">Resizable</div>
+			
+				
+				
+		</body>
+</html>

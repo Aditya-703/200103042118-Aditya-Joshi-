@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>CDN in Javascript</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+				$("#name").click(function(){
+					$(this).css('background-color','orange');
+				});	
+				
+				$("#name").blur(function(){
+					$(this).css('background-color','red');
+				});
+				
+				$("#name").focus(function(){
+					$(this).css('background-color','red');
+				});
+				
+				$("#submit").click(function(){
+					var tx=$("#gmail").text();
+					console.log($("#gmail").text());
+				});
+				
+				
+			});
+		</script>
+		
+	</head>
+		<body>
+		<b>Firstname:</b><input id="name" autofocus placeholder="Enter first name here..."/></div><br><br>
+	<div id="gmail"><p>E-mail id:- adi@gmail.com</p></div><br>
+	<div id="submit"><button id="submit">Submit</button></div><br><br>
+	<div id="cancel"><button id="cancel">Cancel</button></div>
+		</body>
+</html>		
+		
+		

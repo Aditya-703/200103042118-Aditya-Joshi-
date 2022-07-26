@@ -1,0 +1,37 @@
+<html>
+		<head>
+			<title>Parent child selector</title>
+			<style>
+				ul li ul{
+					display:none;
+					}
+				li:hover>ul{
+					display:block;
+					}
+			</style>
+        </head>
+		<body>
+			<ul id="aul">
+				<li> Google
+					<ul>
+						<li> Gmail<ul>
+									<li>Sign in</li>
+									<li> Sign up
+											<ul>
+												<li>sign up using facebook</li>
+												<li>sign up using instagram</li>
+											</ul>
+									</li>
+								  </ul>
+						</li>
+						<li> Map </li>
+						<li>Workspace</li>
+						<li>Classroom</li>
+					</ul>
+				</li>
+				<li> Youtube </li>
+				<li> Amazon </li>
+				<li> Microsoft </li>
+			</ul>
+		</body>
+</html>

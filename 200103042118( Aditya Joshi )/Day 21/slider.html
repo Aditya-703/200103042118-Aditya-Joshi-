@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<style>
+			
+					
+		</style>
+		<script>  
+         $(function() {  
+            $( "#slider" ).slider({  
+               range:true,  
+               min: 500,  
+               max: 1000,  
+               values: [ 50, 300 ],  
+               slide: function( event, ui ) {  
+                  $( "#price" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );  
+               }  
+           });  
+         $( "#price" ).val( "$" + $( "#slider" ).slider( "values", 0 ) +  
+            " - $" + $( "#slider" ).slider( "values", 1 ) );  
+         });  
+      </script>  
+	</head>
+		<body>
+			<p>  
+         <label for="price">Price range:</label>  
+         <input type="text" id="price"   
+            style="border:0; color:green; font-weight:italic;">  
+      </p>  
+			<div id="slider"></div>
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</body>
+</html>

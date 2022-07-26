@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<style>
+			div{
+				width:300px;
+				height:100px;
+				
+				}
+		
+				
+			p{
+				width:500px;
+				height:500px;
+				}
+				
+			#accord{
+					background-color:white;
+					font:black;
+					height:250px;
+					width:400px;
+				}
+				
+			
+					
+		</style>
+		<script>  
+			$(document).ready(function() { 
+			$("#accord").accordion();
+			$("#datepick").datepicker();
+			$("#datepick").datepicker(show);
+			});  
+			
+  </script>  
+	</head>
+		<body>
+			
+			<div id="accord">  
+				<h3>intro</h3>  
+				<div>  
+					<p>  
+						Our friendly wills and estates lawyers have years of experience dealing in wills, probate, powers of attorney, care home fees and other related services. Whatever your age and circumstances, we can help you review your plans for later life
+				</p>    
+				</div>  
+				<h3>head</h3>  
+				<div>  
+					<p>  
+						The sweet and fleshy product of a tree or other plant that contains seeds and can be eaten as food.
+					</p>  
+				</div>  
+				<h3>body</h3>  
+				<div>  
+					<p>  
+						A plant or part of a plant used as food, such as cabbage, potato, turnip, or bean. 
+					</p>  
+				</div>
+			
+			</div><br><br>
+			<div id="date"><p>Date: <input type="text" id="datepick"></p></div>
+		</body>
+</html>

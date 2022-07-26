@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>Validations</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			small{
+				color:red;
+				}
+		</style>
+		<script>
+			var regex = /^([a-za-z]{2,24})$/;
+			var phone_regex = /^([0-9]{10})$/;
+			var password_regex = /^([0-9] [a-zA-z]{6,10})$/;
+			var email_regex = /^([0-9] {10})$/;
+			$(document).ready(function(){
+				$("#name").blur(function(){
+				 if($(this).val()=="" || $(this).val() == null){
+					$("#entername").text("please enter name");
+					
+					}
+				 else{
+					if(!$(this).val().match(regex)){
+						$("#entername").text("please enter valid input");
+						}
+					else{
+						$("#entername").empty();
+				 }
+				 
+				}
+			});
+			$("#name").keypress(function(e){
+				var kc = e.which;
+				
+				if((kc >= 97 && kc <= 122) || 
+				(kc >= 65 && kc <= 90))
+				{
+					$("#entername").empty();
+				}
+				else{
+					$("#entername").text("* Invalid Key Input");
+					}
+			
+			
+			
+			
+			
+			
+			});
+				
+				$("#email").blur(function(){
+				 if($("#email").val()==""){
+					$("#entervalidEmailid").text("please enter valid email");
+					$("#entervalidEmailid").css('color','red');
+					}
+				 else{
+				 }
+				 $(this).keypress(function(){
+					$("#entervalidEmailid").text("");
+				});
+				 
+				});	
+				
+				
+				$("#contact").blur(function(){
+				 if($("#contact").val()==""){
+					$("#entervalidcontactno").text("please enter valid contact no.");
+					$("#entervalidcontactno").css('color','red');
+					}
+				 else{
+				 }
+				 $(this).keypress(function(){
+					$("#entervalidcontactno").text("");
+				});
+				});	
+				
+				
+				$("#password").blur(function(){
+				 if($("#password").val()==""){
+					$("#entervalidpassword").text("please enter valid password");
+					$("#entervalidpassword").css('color','red');
+					}
+				 else{
+				 }
+				 $(this).keypress(function(){
+					$("#entervalidpassword").text("");
+				});
+				});	
+				
+			
+			});
+		</script>
+	</head>
+	<body>
+	<form>
+	<center>
+	<b>Name:</b>
+	<input type="text" id="name" autofocus placeholder="Enter name here..."  maxlength="30" />
+	<small id="entername"></small><br><br>
+	
+	<b>E-mail Id:</b>
+	<input type="email" id="email" autofocus placeholder="Enter e-mail here..."  maxlength="30" />
+	<small id="entervalidEmailid"></small> <br><br>
+	
+	<b>Contact No:</b>
+	<input type="number" id="contact" autofocus placeholder="Enter contact no. here"  maxlength="10" />
+	<small id="entervalidcontactno"></small><br><br>
+	
+	<b>Password:</b>
+	<input type="password" id="password" autofocus placeholder="Enter password here..."  maxlength="30"  />
+	<small id="entervalidpassword"></small><br><br>
+	
+	<button id="button" class="button">Submit</button>
+	
+	</center>
+	</form>
+	</body>
+</html>
